@@ -8,8 +8,8 @@
       Tutorial Case
 
       Red Ball Pizza Survey Form
-      Author: 
-      Date:   
+      Author: Brenden Riley
+      Date:   1.7.19
 
       Filename:   rb_survey.html
 
@@ -53,60 +53,61 @@
             Pizza will not share your contact information with third
             parties, <em>ever</em>. </p>
         <p>Required values are marked by an asterisk (*)</p>
-        <form id="survey" action="http://www.example.com/redball/survey" method="post">
+
+        <form id="survey" action="http://www.example.com/redball/survey" method="POST">
             <fieldset id="custInfo">
 
                 <legend>Customer Information</legend>
                 <label for="name">Name*</label>
-                <input name=”custName” id=”name” type=”text” placeholder="first and last name" required />
+                <input name="custName" id="name" type="text" placeholder="first and last name" required />
 
                 <label for="street">Street address</label>
-                <input name=”custStreet” id=”street” type=”text” />
+                <input name="custStreet" id="street" type="text" />
 
                 <label for="city">City</label>
-                <input name=”custCity” id=”city” type=”text” value="Ormond Beach" />
+                <input name="custCity" id="city" type="text" value="Ormond Beach" />
 
                 <label for="state">State</label>
-                <input name=”custState” id=”state” type=”text” value="FL" />
+                <input name="custState" id="state" type="text" value="FL" />
 
                 <label for="zip">Postal code</label>
-                <input name=”custZip” id=”zip” type=”text” placeholder="##### (-####)" />
+                <input name="custZip" id="zip" type="text" placeholder="##### (-####)" />
 
                 <label for="Phone number">Phone number</label>
-                <input name=”custPhone” id=”phone” type=”tel” placeholder="(###) ###-####" />
+                <input name="custPhone" id="phone" type="tel" placeholder="(###) ###-####" />
 
                 <label for="E-mail">E-mail*</label>
-                <input name=”custEmail” id=”mail” type=”email” required />
+                <input name="custEmail" id="mail" type="email" required />
 
-                <div class=”formRow”>
-                    <label for=”info”>Where did you hear about us? <br />(select all that apply)</label>
-                    <select name=”infoSrc” id=”info” size=”5” multiple>
-                        <option value=”internet”>Internet</option>
-                        <option value=”mag”>Magazine</option>
-                        <option value=”news”>Newspaper</option>
-                        <option value=”word”>Word of Mouth</option>
-                        <option value=”other”>Other</option>
+                <div class="formRow">
+                    <label for="info">Where did you hear about us? <br />(select all that apply)</label>
+                    <select name="infoSrc" id="info" size="5" multiple>
+                        <option value="internet">Internet</option>
+                        <option value="mag">Magazine</option>
+                        <option value="news">Newspaper</option>
+                        <option value="word">Word of Mouth</option>
+                        <option value="other">Other</option>
                     </select>
                 </div>
 
-                <div class=”formRow”> <label for=”dish”>What's your favorite dish?</label> <input name=”favDish” id=”dish”
-                        type=”text” list=”dishType” />
-                    <datalist id=”dishType”>
-                        <option value=”Anitpasto Pizza” />
-                        <option value=”Big Kahuna Pizza” />
-                        <option value=”BBQ Chicken Pizza” />
-                        <option value=”Mediterranean Herb Pizza” />
-                        <option value=”Pasta Rolls” />
-                        <option value=”Pasto Artichoke Pizza” />
+                <div class="formRow"> <label for="dish">What's your favorite dish?</label> <input name="favDish" id="dish"
+                        type="text" list="dishType" />
+                    <datalist id="dishType">
+                        <option value="Anitpasto Pizza" />
+                        <option value="Big Kahuna Pizza" />
+                        <option value="BBQ Chicken Pizza" />
+                        <option value="Mediterranean Herb Pizza" />
+                        <option value="Pasta Rolls" />
+                        <option value="Pasto Artichoke Pizza" />
                     </datalist> </div>
 
-                <div class=”formRow”>
-                    <label for=”dineSpin”>How many times do you dine out per month?</label>
-                    <input name=”dineOut” id=”dineSpin” type=”number” value="1" step="1" min=”0” max=”20” />
+                <div class="formRow">
+                    <label for="dineSpin">How many times do you dine out per month?</label>
+                    <input name="dineOut" id="dineSpin" type="number" value="1" step="1" min="0" max="20" />
                 </div>
 
-                <input name=”mailMe” id=”mailCB” value="yes" type="checkbox" />
-                <label for=”mailCB”>Add me to your mailing list for great coupons and specials!</label>
+                <input name="mailMe" id="mailCB" value="yes" type="checkbox" />
+                <label for="mailCB">Add me to your mailing list for great coupons and specials!</label>
             </fieldset>
             <fieldset id="expInfo">
                 <legend>Share Your Experience at Red Ball Pizza</legend>
@@ -155,8 +156,8 @@
                     </fieldset>
                 </div>
 
-                <div class=”formRow”>
-                    <label for=”rangeBox”>Rate the overall service<br />
+                <div class="formRow">
+                    <label for="rangeBox">Rate the overall service<br />
                         (0=poor; 10=great)</label>
                     0 <input name="serviceRate" id="rangeBox" type="range" value="5" step="1" min="0" max="10" />
                     10 </div>
@@ -166,7 +167,7 @@
 
             </fieldset>
 
-            <div id=”buttons”>
+            <div id="buttons">
                 <input type="submit" value="Submit My Survey" />
                 <input type="reset" value="Cancel" />
             </div>
