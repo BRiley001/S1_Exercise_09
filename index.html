@@ -20,6 +20,7 @@
     <title>Red Ball Survey</title>
     <link href="rb_reset.css" rel="stylesheet" />
     <link href="rb_styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="rb_forms.css" />
     <script src="rb_formsubmit.js"></script>
 
 </head>
@@ -54,30 +55,46 @@
             parties, <em>ever</em>. </p>
         <p>Required values are marked by an asterisk (*)</p>
 
+        <!-- survey 1 -->
         <form id="survey" action="http://www.example.com/redball/survey" method="POST">
             <fieldset id="custInfo">
 
                 <legend>Customer Information</legend>
-                <label for="name">Name*</label>
-                <input name="custName" id="name" type="text" placeholder="first and last name" required />
+                <div class="formRow">
+                    <label for="name">Name*</label>
+                    <input name="custName" id="name" type="text" placeholder="first and last name" required />
+                </div>
 
-                <label for="street">Street address</label>
-                <input name="custStreet" id="street" type="text" />
+                <div class="formRow">
+                    <label for="street">Street address</label>
+                    <input name="custStreet" id="street" type="text" />
+                </div>
 
-                <label for="city">City</label>
-                <input name="custCity" id="city" type="text" value="Ormond Beach" />
+                <div class="formRow">
+                    <label for="city">City</label>
+                    <input name="custCity" id="city" type="text" value="Ormond Beach" />
+                </div>
 
-                <label for="state">State</label>
-                <input name="custState" id="state" type="text" value="FL" />
+                <div class="formRow">
+                    <label for="state">State</label>
+                    <input name="custState" id="state" type="text" value="FL" />
+                </div>
 
-                <label for="zip">Postal code</label>
-                <input name="custZip" id="zip" type="text" placeholder="##### (-####)" />
+                <div class="formRow">
+                    <label for="zip">Postal code</label>
+                    <input name="custZip" id="zip" type="text" placeholder="nnnnn (-nnnn)" />
+                </div>
 
-                <label for="Phone number">Phone number</label>
-                <input name="custPhone" id="phone" type="tel" placeholder="(###) ###-####" />
+                <div class="formRow">
+                    <label for="Phone number">Phone number</label>
+                    <input name="custPhone" id="phone" type="tel" placeholder="(nnn) nnn-nnnn" />
+                </div>
 
-                <label for="E-mail">E-mail*</label>
-                <input name="custEmail" id="mail" type="email" required />
+                <div class="formRow">
+                    <label for="E-mail">E-mail*</label>
+                    <input name="custEmail" id="mail" type="email" required />
+                </div>
+
 
                 <div class="formRow">
                     <label for="info">Where did you hear about us? <br />(select all that apply)</label>
@@ -90,8 +107,9 @@
                     </select>
                 </div>
 
-                <div class="formRow"> <label for="dish">What's your favorite dish?</label> <input name="favDish" id="dish"
-                        type="text" list="dishType" />
+                <div class="formRow">
+                    <label for="dish">What's your favorite dish?</label>
+                    <input name="favDish" id="dish" type="text" list="dishType" />
                     <datalist id="dishType">
                         <option value="Anitpasto Pizza" />
                         <option value="Big Kahuna Pizza" />
@@ -109,6 +127,7 @@
                 <input name="mailMe" id="mailCB" value="yes" type="checkbox" />
                 <label for="mailCB">Add me to your mailing list for great coupons and specials!</label>
             </fieldset>
+            <!-- survey 2 -->
             <fieldset id="expInfo">
                 <legend>Share Your Experience at Red Ball Pizza</legend>
                 <div class="formRow">
@@ -130,9 +149,9 @@
                     <label>Was your service friendly?</label>
                     <fieldset>
                         <label for="fYes">Yes</label>
-                        <input name="sFriend" id="fYes" value="yes" type="radio">
+                        <input type="radio" name="sFriend" id="fYes" value="yes" />
                         <label for="fNo">No</label>
-                        <input name="sFriend" id="fNo" value="no" type="radio">
+                        <input type="radio" name="sFriend" id="fNo" value="no" />
                     </fieldset>
                 </div>
 
@@ -140,9 +159,9 @@
                     <label>Was your order correct?</label>
                     <fieldset>
                         <label for="cYes">Yes</label>
-                        <input name="oCorrect" id="cYes" value="yes" type="radio">
+                        <input type="radio" name="oCorrect" id="cYes" value="yes" />
                         <label for="cNo">No</label>
-                        <input name="oCorrect" id="cNo" value="no" type="radio">
+                        <input type="radio" name="oCorrect" id="cNo" value="no" />
                     </fieldset>
                 </div>
 
@@ -150,9 +169,9 @@
                     <label>Was your food hot?</label>
                     <fieldset>
                         <label for="hYes">Yes</label>
-                        <input name="foodHot" id="hYes" value="yes" type="radio">
+                        <input type="radio" name="foodHot" id="hYes" value="yes" />
                         <label for="hNo">No</label>
-                        <input name="foodHot" id="hNo" value="no" type="radio">
+                        <input type="radio" name="foodHot" id="hNo" value="no" />
                     </fieldset>
                 </div>
 
